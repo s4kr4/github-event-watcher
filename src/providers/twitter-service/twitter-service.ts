@@ -17,14 +17,21 @@ export class TwitterServiceProvider {
 
   oauth() {
     const oauth = new OAuth(
-      'https://twitter.com/oauth/request_token',
-      'https://twitter.com/oauth/access_token',
+      '/oauth/request_token',
+      '/oauth/access_token',
       process.env.CONSUMER_KEY,
       process.env.CONSUMER_SECRET,
       '1.0A',
       'http://localhost:8100/oauth/callback/',
       'HMAC-SHA1',
     );
+
+    oauth.getOAuthRequestToken(function (error, oauth_token, oauth_token_secret, results) {
+      if (error) {
+        console.log(error);
+      }
+      console.log(`${oauth_token}:${oauth_token_secret}`);
+    });
     return oauth;
   }
 
