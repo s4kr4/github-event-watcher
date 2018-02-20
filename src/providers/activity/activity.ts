@@ -15,8 +15,8 @@ export class ActivityProvider {
     console.log('Hello ActivityProvider Provider');
   }
 
-  getActivigy(username: string): Observable<Object> {
-    return this.http.get(`/github/users/${username}/events`)
+  getActivity(username: string): Observable<Object> {
+    return this.http.get(`/github/users/${username}/events`);
   }
 
 }

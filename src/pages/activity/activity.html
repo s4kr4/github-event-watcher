@@ -21,6 +21,9 @@
   </div>
   <ion-list class="activity-list">
     <ng-container *ngFor="let item of activity">
+      <button ion-item>
+        <p>{{item.type}}</p>
+      </button>
     </ng-container>
   </ion-list>
 </ion-content>

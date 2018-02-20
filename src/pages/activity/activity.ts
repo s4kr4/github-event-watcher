@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { ActivityProvider } from '../../providers/activity/activity';
 
 /**
  * Generated class for the ActivityPage page.
@@ -15,11 +16,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ActivityPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  activity: any[] = [];
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public loadingController: LoadingController,
+    public activityProvider: ActivityProvider,
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActivityPage');
+  }
+
+  getActivity() {
+    const username: string = this.username;
+
+    if (!username) return;
+
+    const loader = this.loadingController.create({
+      content: 'Loading...'
+    });
+    loader.present();
+
+    this.activityProvider.getActivity(username).subscribe((response: any) => {
+      this.activity = response;
+      loader.dismiss();
+    }, (error: any) => {
+      loader.dismiss();
+    })
   }
 
 }
