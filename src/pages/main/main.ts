@@ -15,7 +15,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class MainPage {
 
-  timelineRoot = 'TimelinePage'
+  activityRoot = 'ActivityPage'
   settingsRoot = 'SettingsPage'
 
 
