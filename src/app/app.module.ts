@@ -6,7 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { TwitterServiceProvider } from '../providers/twitter-service/twitter-service';
 import { ActivityProvider } from '../providers/activity/activity';
 
 @NgModule({
@@ -27,7 +26,6 @@ import { ActivityProvider } from '../providers/activity/activity';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TwitterServiceProvider,
     ActivityProvider
   ]
 })
