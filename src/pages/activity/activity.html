@@ -7,12 +7,20 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>activity</ion-title>
+    <ion-title>Activity</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="searchbar" ion-fixed>
+    <form action="" (keydown.enter)="getActivity($event)">
+      <ion-searchbar name="username" [(ngModel)]="username" placeholder="ユーザー名"></ion-searchbar>
+    </form>
+  </div>
+  <ion-list class="activity-list">
+    <ng-container *ngFor="let item of activity">
+    </ng-container>
+  </ion-list>
 </ion-content>
