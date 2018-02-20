@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TwitterServiceProvider } from '../providers/twitter-service/twitter-service';
+import { ActivityProvider } from '../providers/activity/activity';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TwitterServiceProvider } from '../providers/twitter-service/twitter-ser
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TwitterServiceProvider
+    TwitterServiceProvider,
+    ActivityProvider
   ]
 })
 export class AppModule {}
