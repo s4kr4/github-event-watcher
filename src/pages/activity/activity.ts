@@ -16,6 +16,7 @@ import { ActivityProvider } from '../../providers/activity/activity';
 })
 export class ActivityPage {
 
+  username: string = '';
   activity: any[] = [];
 
   constructor(
