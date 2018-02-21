@@ -1,1 +1,1 @@
-/github/users/:username/events https://api.github.com/github/users/:username/events
+/github/users/:username/events https://api.github.com/users/:username/events
