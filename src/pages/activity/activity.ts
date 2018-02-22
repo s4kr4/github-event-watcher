@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { ActivityProvider } from '../../providers/activity/activity';
 
 /**
@@ -9,7 +9,6 @@ import { ActivityProvider } from '../../providers/activity/activity';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-activity',
   templateUrl: 'activity.html',
