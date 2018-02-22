@@ -48,4 +48,10 @@ export class ActivityPage {
     })
   }
 
+  openDetail(item) {
+    this.navCtrl.push('ActivityDetailPage', {
+      activityId: item.id,
+      activity: item,
+    });
+  }
 }
