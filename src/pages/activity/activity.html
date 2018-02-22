@@ -21,8 +21,16 @@
   </div>
   <ion-list class="activity-list">
     <ng-container *ngFor="let item of activity">
-      <button ion-item>
-        <p>{{item.type}}</p>
+      <button ion-item class="activity" (click)="openDetail(item)">
+        <div class="activity-type">
+          {{item.type}}
+        </div>
+        <div class="activity-repo-name">
+          {{item.repo.name}}
+        </div>
+        <div class="activity-time">
+          {{item.created_at | date: 'medium'}}
+        </div>
       </button>
     </ng-container>
   </ion-list>

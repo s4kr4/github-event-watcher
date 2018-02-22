@@ -1,3 +1,17 @@
 page-activity {
+  .activity {
+    &-type {
+      font-size: 0.8em;
+    }
 
+    &-repo-name {
+      padding-top: 5px;
+      font-size: 1.2em;
+    }
+
+    &-time {
+      padding-top: 5px;
+      font-size: 0.8em;
+    }
+  }
 }
