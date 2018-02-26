@@ -31,7 +31,7 @@ export class ActivityPage {
     console.log('ionViewDidLoad ActivityPage');
   }
 
-  getActivity() {
+  getActivities() {
     const username: string = this.username;
 
     if (!username) return;
@@ -41,7 +41,7 @@ export class ActivityPage {
     });
     loader.present();
 
-    this.activityProvider.getEvents(username).subscribe((response: any) => {
+    this.activityProvider.getActivities(username).subscribe((response: any) => {
       localStorage.setItem('events', JSON.stringify(response));
       this.activity = response;
       loader.dismiss();
@@ -51,7 +51,7 @@ export class ActivityPage {
   }
 
   openDetail(id) {
-    const detail = this.activityProvider.getEventDetail(id)[0];
+    const detail = this.activityProvider.getActivity(id)[0];
     this.navCtrl.push('ActivityDetailPage', {
       activityId: detail.id,
       activity: detail,
