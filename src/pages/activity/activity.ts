@@ -41,7 +41,8 @@ export class ActivityPage {
     });
     loader.present();
 
-    this.activityProvider.getActivity(username).subscribe((response: any) => {
+    this.activityProvider.getEvents(username).subscribe((response: any) => {
+      localStorage.setItem('events', JSON.stringify(response));
       this.activity = response;
       loader.dismiss();
     }, (error: any) => {
@@ -49,10 +50,11 @@ export class ActivityPage {
     })
   }
 
-  openDetail(item) {
+  openDetail(id) {
+    const detail = this.activityProvider.getEventDetail(id)[0];
     this.navCtrl.push('ActivityDetailPage', {
-      activityId: item.id,
-      activity: item,
+      activityId: detail.id,
+      activity: detail,
     });
   }
 }

@@ -21,7 +21,7 @@
   </div>
   <ion-list class="activity-list">
     <ng-container *ngFor="let item of activity">
-      <button ion-item class="activity" (click)="openDetail(item)">
+      <button ion-item class="activity" (click)="openDetail(item.id)">
         <div class="activity-type">
           {{item.type}}
         </div>

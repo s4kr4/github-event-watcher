@@ -15,8 +15,15 @@ export class ActivityProvider {
     console.log('Hello ActivityProvider Provider');
   }
 
-  getActivity(username: string): Observable<Object> {
+  getEvents(username: string): Observable<Object> {
     return this.http.get(`/github/users/${username}/events`);
+  }
+
+  getEventDetail(id: number): Observable<Object> {
+    const events = JSON.parse(localStorage.getItem('events'));
+    return events.filter((item, index) => {
+      if (item.id === id) return true;
+    })
   }
 
 }
