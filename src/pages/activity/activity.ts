@@ -51,10 +51,8 @@ export class ActivityPage {
   }
 
   openDetail(id) {
-    const detail = this.activityProvider.getActivity(id)[0];
     this.navCtrl.push('ActivityDetailPage', {
       activityId: detail.id,
-      activity: detail,
     });
   }
 }
