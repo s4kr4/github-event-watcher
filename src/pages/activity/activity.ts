@@ -52,7 +52,7 @@ export class ActivityPage {
 
   openDetail(id) {
     this.navCtrl.push('ActivityDetailPage', {
-      activityId: detail.id,
+      activityId: id,
     });
   }
 }

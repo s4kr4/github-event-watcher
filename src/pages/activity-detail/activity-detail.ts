@@ -28,9 +28,7 @@ export class ActivityDetailPage {
   }
 
   ionViewDidLoad() {
-    this.activityProvider.getActivity(this.navParams.data.activityId).subscribe((activity: any) => {
-      if (!activity) this.activity = activity;
-    });
+    this.activity = this.activityProvider.getActivity(this.navParams.data.activityId);
     console.log(this.activity);
   }
 
