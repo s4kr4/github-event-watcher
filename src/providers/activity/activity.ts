@@ -20,10 +20,10 @@ export class ActivityProvider {
   }
 
   getActivity(id: number): Object {
-    const events = JSON.parse(localStorage.getItem('events')).filter((item, index) => {
-      if (item.id === id) return true;
+    const events = JSON.parse(localStorage.getItem('events')).find((item) => {
+      return (item.id === id);
     });
-    return events[0];
+    return events;
   }
 
 }
