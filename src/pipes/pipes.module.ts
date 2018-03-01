@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { UrlTransformPipe } from './url-transform/url-transform';
+import { EventNamePipe } from './event-name/event-name';
 
 @NgModule({
   declarations: [
-    UrlTransformPipe
+    UrlTransformPipe,
+    EventNamePipe,
   ],
 	imports: [],
   exports: [
-    UrlTransformPipe
+    UrlTransformPipe,
+    EventNamePipe,
   ]
 })
 export class PipesModule {}
