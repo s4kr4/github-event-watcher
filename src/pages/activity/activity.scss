@@ -1,7 +1,20 @@
 page-activity {
   .activity {
     &-type {
-      font-size: 0.8em;
+      &-pushevent, &-createevent {
+        color: #3c3;
+        font-size: 0.8em;
+      }
+
+      &-watchevent {
+        color: #fa0;
+        font-size: 0.8em;
+      }
+
+      &-publicevent {
+        color: #0af;
+        font-size: 0.8em;
+      }
     }
 
     &-repo-name {
