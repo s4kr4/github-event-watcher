@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  LoadingController,
+  AlertController,
+} from 'ionic-angular';
+
 import { ActivityProvider } from '../../providers/activity/activity';
 
 /**
@@ -24,6 +31,7 @@ export class ActivityPage {
     public navParams: NavParams,
     public loadingController: LoadingController,
     public activityProvider: ActivityProvider,
+    private alertController: AlertController,
   ) {
   }
 
@@ -47,8 +55,16 @@ export class ActivityPage {
       this.activity = response;
       loader.dismiss();
     }, (error: any) => {
+      this.activity = [];
       loader.dismiss();
-    })
+
+      const alert = this.alertController.create({
+        title: 'Not found!',
+        subTitle: 'The user you typed does not exist.',
+        buttons: ['OK'],
+      });
+      alert.present();
+    });
   }
 
   openDetail(id) {
