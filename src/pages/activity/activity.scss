@@ -1,5 +1,13 @@
 page-activity {
+  .searchbar {
+    width: 100%;
+  }
+
   .activity {
+    &-list {
+      margin-top: 30px;
+    }
+
     &-type {
       &-pushevent, &-createevent {
         color: #3c3;
