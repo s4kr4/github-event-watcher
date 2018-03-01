@@ -22,7 +22,7 @@
   <ion-list class="activity-list">
     <ng-container *ngFor="let item of activity">
       <button ion-item class="activity" (click)="openDetail(item.id)">
-        <div class="activity-type-{{item.type | lowercase}}">
+        <div class="activity-type-{{item.type | eventName}}">
           {{item.type}}
         </div>
         <div class="activity-repo-name">

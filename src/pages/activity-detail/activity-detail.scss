@@ -1,17 +1,17 @@
 page-activity-detail {
   .activity {
     &-type {
-      &-pushevent, &-createevent {
+      &-push, &-create {
         color: #3c3;
         font-size: 1.2em;
       }
 
-      &-watchevent {
+      &-watch {
         color: #fa0;
         font-size: 1.2em;
       }
 
-      &-publicevent {
+      &-public {
         color: #0af;
         font-size: 1.2em;
       }

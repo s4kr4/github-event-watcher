@@ -9,17 +9,17 @@ page-activity {
     }
 
     &-type {
-      &-pushevent, &-createevent {
+      &-push, &-create {
         color: #3c3;
         font-size: 0.8em;
       }
 
-      &-watchevent {
+      &-watch {
         color: #fa0;
         font-size: 0.8em;
       }
 
-      &-publicevent {
+      &-public {
         color: #0af;
         font-size: 0.8em;
       }
