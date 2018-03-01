@@ -29,6 +29,7 @@ export class ActivityPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActivityPage');
+    this.activity = JSON.parse(localStorage.getItem('events'));
   }
 
   getActivities() {
