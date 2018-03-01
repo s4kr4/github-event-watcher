@@ -23,3 +23,23 @@
 ion-label {
   white-space: normal;
 }
+
+.activity {
+  &-type {
+    &-push, &-create {
+      color: #3c3;
+    }
+
+    &-watch {
+      color: #fa0;
+    }
+
+    &-public {
+      color: #0af;
+    }
+
+    &-pullrequest {
+      color: #f00;
+    }
+  }
+}

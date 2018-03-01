@@ -16,7 +16,7 @@
 <ion-content padding>
   <ng-container>
     <div class="activity">
-      <div class="activity-type-{{(activity.type) ? (activity.type | eventName) : ''}}">{{activity.type}}</div>
+      <div class="activity-type activity-type-{{(activity.type) ? (activity.type | eventName) : ''}}">{{activity.type}}</div>
       <div class="activity-repo-name">
         <a href="{{(activity.repo?.url) ? (activity.repo?.url | urlTransform) : ''}}" target="_blank" rel="noopener noreferrer">
           {{activity.repo?.name}}

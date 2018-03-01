@@ -9,20 +9,7 @@ page-activity {
     }
 
     &-type {
-      &-push, &-create {
-        color: #3c3;
-        font-size: 0.8em;
-      }
-
-      &-watch {
-        color: #fa0;
-        font-size: 0.8em;
-      }
-
-      &-public {
-        color: #0af;
-        font-size: 0.8em;
-      }
+      font-size: 0.8em;
     }
 
     &-repo-name {

@@ -1,20 +1,7 @@
 page-activity-detail {
   .activity {
     &-type {
-      &-push, &-create {
-        color: #3c3;
-        font-size: 1.2em;
-      }
-
-      &-watch {
-        color: #fa0;
-        font-size: 1.2em;
-      }
-
-      &-public {
-        color: #0af;
-        font-size: 1.2em;
-      }
+      font-size: 1.2em;
     }
 
     &-repo-name {
