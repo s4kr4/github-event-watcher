@@ -1,3 +1,46 @@
 page-activity-detail {
+  .activity {
+    &-type {
+      &-pushevent, &-createevent {
+        color: #3c3;
+        font-size: 1.2em;
+      }
 
+      &-watchevent {
+        color: #fa0;
+        font-size: 1.2em;
+      }
+
+      &-publicevent {
+        color: #0af;
+        font-size: 1.2em;
+      }
+    }
+
+    &-repo-name {
+      padding-top: 5px;
+      font-size: 1.8em;
+
+      a {
+        color: #555;
+        text-decoration: none;
+      }
+    }
+
+    &-commit {
+      padding-top: 7px;
+      margin-left: 5px;
+      font-size: 1.2em;
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+    }
+
+    &-datetime {
+      padding-top: 10px;
+      color: #aaa;
+    }
+  }
 }

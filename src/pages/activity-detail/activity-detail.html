@@ -15,6 +15,23 @@
 
 <ion-content padding>
   <ng-container>
-    {{activity.id}}
+    <div class="activity">
+      <div class="activity-type-{{activity.type | lowercase}}">{{activity.type}}</div>
+      <div class="activity-repo-name">
+        <a href="{{(activity.repo?.url) ? (activity.repo?.url | urlTransform) : ''}}" target="_blank" rel="noopener noreferrer">
+          {{activity.repo?.name}}
+        </a>
+      </div>
+      <div class="activity-commits">
+        <div class="activity-commit" *ngFor="let commit of activity.payload?.commits">
+          <a href="{{commit.url | urlTransform}}" target="_blank" rel="noopener noreferrer">
+            {{commit.message}}
+          </a>
+        </div>
+      </div>
+      <div class="activity-datetime">
+        {{activity.created_at | date: 'medium'}}
+      </div>
+    </div>
   </ng-container>
 </ion-content>
