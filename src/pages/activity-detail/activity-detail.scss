@@ -14,14 +14,14 @@ page-activity-detail {
       }
     }
 
-    &-commit {
-      padding-top: 7px;
+    &-detail {
+      margin-top: 7px;
       font-size: 1.2em;
+    }
 
-      a {
-        color: #333;
-        text-decoration: none;
-      }
+    a {
+      color: #333;
+      text-decoration: none;
     }
 
     &-datetime {

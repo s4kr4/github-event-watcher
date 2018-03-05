@@ -22,13 +22,20 @@
           {{activity.repo?.name}}
         </a>
       </div>
-      <ul class="activity-commits">
-        <li class="activity-commit" *ngFor="let commit of activity.payload?.commits">
-          <a href="{{commit.url | urlTransform}}" target="_blank" rel="noopener noreferrer">
-            {{commit.message}}
+      <div class="activity-detail">
+        <ul class="activity-commits" *ngIf="activity.type === 'PushEvent'">
+          <li class="activity-commit" *ngFor="let commit of activity.payload?.commits">
+            <a href="{{commit.url | urlTransform}}" target="_blank" rel="noopener noreferrer">
+              {{commit.message}}
+            </a>
+          </li>
+        </ul>
+        <div class="activity-issue" *ngIf="activity.type === 'IssuesEvent'">
+          <a href="{{activity.payload?.issue.url | urlTransform }}" target="_blank" rel="noopener noreferrer">
+            {{activity.payload?.issue.title}}
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
       <div class="activity-datetime">
         {{activity.created_at | date: 'medium'}}
       </div>
