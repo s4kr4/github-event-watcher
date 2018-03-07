@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "GitHub Event Watcher",
+  "short_name": "GH Watcher",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
