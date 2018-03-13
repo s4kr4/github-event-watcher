@@ -20,12 +20,15 @@ export class ActivityProvider {
   }
 
   getActivities(username: string): Observable<Object> {
-    const url = `users/${username}/events`;
+    let url = `/users/${username}/events`;
+
     if (this.platform.is('mobile')) {
-      return this.http.get(`https://api.github.com/${url}`);
+      url = `https://api.github.com/${url}`;
     } else {
-      return this.http.get(`/github/${url}`);
+      url = `/github/${url}`
     }
+
+    return this.http.get(url);
   }
 
   getActivity(id: number): Object {
